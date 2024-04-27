@@ -11,7 +11,7 @@ while initial_balance > 0:
     print("---------------------------------------------------------")
     
     input("\nPress Enter to play...")
-    #os.system('cls' if os.name == 'nt' else 'clear')  
+    os.system('cls' if os.name == 'nt' else 'clear') # clears the terminal screen in a platform-independent manner
     print("---------------------------------------------------------")
     
     result = random.choices(items, k = 3)
