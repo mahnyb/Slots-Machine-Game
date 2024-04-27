@@ -5,7 +5,7 @@ items = ["🍒", "🍇", "🍋", "7️⃣"]
 
 initial_balance = 100
 
-while initial_balance > 0:
+while initial_balance > 20:
     print("---------------------------------------------------------")
     print(f"\nCurrent Balance: {initial_balance}\n")
     print("---------------------------------------------------------")
@@ -30,7 +30,7 @@ while initial_balance > 0:
     
     print(f"\nCurrent Balance: {initial_balance}\n") # current balance after each round
     
-    if initial_balance <= 0:
+    if initial_balance <= 20:
         print("\nGame Over. Your balance is zero\n")
         break
     
