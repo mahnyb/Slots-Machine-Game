@@ -1,0 +1,1 @@
+result = random.choices(items, k = 3)
