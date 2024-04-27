@@ -11,28 +11,28 @@ while initial_balance > 0:
     print("---------------------------------------------------------")
     
     input("\nPress Enter to play...")
-    os.system('cls' if os.name == 'nt' else 'clear')  
+    #os.system('cls' if os.name == 'nt' else 'clear')  
     print("---------------------------------------------------------")
     
     result = random.choices(items, k = 3)
 
     print("")
 
-    print(result[0], " | ", result[1], " | ", result[2])
+    print(f"{result[0]} | {result[1]} | {result[2]}")
 
     if result[0] == result[1] == result[2]:
         initial_balance += 10
         print("\nYou Won!! +10 added to your balance\n")
-    
-    
+
     else:
         initial_balance -= 20
         print("\nYou Lost :( -20 deducted from your balance\n")
     
     print(f"\nCurrent Balance: {initial_balance}\n") # current balance after each round
     
-    if initial_balance <0:
+    if initial_balance <= 0:
         print("\nGame Over. Your balance is zero\n")
+        break
     
     print("---------------------------------------------------------")
     
@@ -40,12 +40,14 @@ while initial_balance > 0:
 
     while choice not in ("c", "w"):
         print("Invalid choice. Please enter C for to continue playing or W to withdraw from the game")
+        choice = input("Do you want to continue playing (c) or withdraw (w)? ").lower()
     
     if choice == "w":
         print("You chose to withdraw. Game Over\n")
         break
     elif choice == "c":
         continue
+
 
 print("---------------------------------------------------------")
 print(f"Final Balance: {initial_balance}\n")
